@@ -1,0 +1,13 @@
+{
+  "projectVersion": "StudyGo digital guide v5",
+  "source": "StudyGo-mobile-university-pages-expanded (1).html",
+  "styleBlocks": 4,
+  "scriptBlocks": 1,
+  "extractedImages": 17,
+  "sourceSha256": "d2069894663ad4a4cd1af87a500eeb34732205cfda8ebfc79cb20d60f809d12f",
+  "approvedDesignLayer": "assets/css/approved-v5.css",
+  "approvedInteractionLayer": "assets/js/approved-v5.js",
+  "catalogRecords": 325,
+  "licensedCampusCards": 4,
+  "assetCredits": "ASSET_CREDITS.md"
+}

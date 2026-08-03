@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="StudyGo — каталог университетов Китая, программы после 9 и 11 класса, языковой год, магистратура, гранты и персональная консультация." name="description"/>
+<title>StudyGo — каталог университетов и поступление в Китай</title>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="StudyGo — учёба в Китае с понятным маршрутом"/>
+<meta property="og:description" content="Каталог учебных заведений, пять маршрутов поступления и сопровождение семьи на каждом шаге."/>
+<meta property="og:image" content="assets/images/original/studygo-office-admissions-v6.png"/>
+<meta property="og:image:alt" content="StudyGo — твоя China era с понятным маршрутом"/>
+<meta property="og:image:width" content="1730"/>
+<meta property="og:image:height" content="909"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="StudyGo — учёба в Китае с понятным маршрутом"/>
+<meta name="twitter:description" content="Каталог учебных заведений, пять маршрутов поступления и StudyGo Passport."/>
+<meta name="twitter:image" content="assets/images/original/studygo-office-admissions-v6.png"/>
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml"/>
+<link rel="stylesheet" href="assets/css/styles.css"/>
+<link rel="stylesheet" href="assets/css/approved-v5.css"/>
+
+
+
+
+
+
+</head>
+<body class="approved-v5">
+<header class="sg-header">
+<div class="container sg-nav-row">
+<a aria-label="StudyGo — Учёба в Китае" class="sg-brand" href="#top">
+<span class="sg-brand-word"><span class="sg-study">Study</span><span class="sg-go">Go</span></span>
+<span class="sg-brand-sub" data-i18n="brandSubNew">Учёба в Китае</span>
+</a>
+<nav aria-label="Основная навигация" class="sg-main-nav" id="sgMainNav">
+<a data-i18n="navCatalogUniversities" href="#catalog">Каталог университетов</a>
+<div class="sg-nav-dropdown">
+<button class="sg-nav-dropdown-trigger" type="button" aria-expanded="false"><span data-i18n="navAdmission">Поступление</span><span aria-hidden="true">⌄</span></button>
+<div class="sg-nav-submenu">
+<a href="#routes" data-i18n="navFiveRoutes">Пять маршрутов</a>
+<a href="#routes" data-action="find-route" data-i18n="navChooseRoute">Подобрать маршрут</a>
+<a href="#catalog" data-action="compare-open" data-i18n="navComparison">Сравнение</a>
+</div>
+</div>
+<div class="sg-nav-dropdown">
+<button class="sg-nav-dropdown-trigger" type="button" aria-expanded="false"><span data-i18n="navUseful">Полезное</span><span aria-hidden="true">⌄</span></button>
+<div class="sg-nav-submenu">
+<a href="#blog" data-i18n="navBlog">Блог</a>
+<a href="#routes" data-i18n="navAdmissionGuides">Гайды по поступлению</a>
+<a href="#blog" data-article-open="visa" data-i18n="navDocsVisa">Документы и виза</a>
+<a href="#city-life" data-i18n="navLifeChina">Жизнь в Китае</a>
+<a href="#questions" data-i18n="navQuestions">Вопросы и ответы</a>
+</div>
+</div>
+<div class="sg-nav-dropdown">
+<button class="sg-nav-dropdown-trigger" type="button" aria-expanded="false"><span data-i18n="navAboutCompany">О компании</span><span aria-hidden="true">⌄</span></button>
+<div class="sg-nav-submenu">
+<a href="team.html" data-i18n="navOurTeam">Наша команда</a>
+<a href="services.html" data-i18n="navPricesServices">Цены и услуги</a>
+<a href="about.html#reviews" data-i18n="navReviews">Отзывы</a>
+</div>
+</div>
+</nav>
+<div class="sg-header-actions">
+<div class="sg-language" id="sgLanguage">
+<button aria-expanded="false" aria-haspopup="listbox" aria-label="Выбрать язык" class="sg-language-trigger" id="sgLanguageTrigger" type="button">
+<span class="sg-language-flag" id="sgCurrentLangFlag">🇷🇺</span>
+<span class="sg-language-code" id="sgCurrentLangCode">RU</span>
+<span aria-hidden="true" class="sg-language-chevron">⌄</span>
+</button>
+<div aria-label="Language" class="sg-language-menu" id="sgLanguageMenu" role="listbox">
+<button aria-selected="true" class="active" data-lang="ru" role="option" type="button"><span class="sg-language-option-flag">🇷🇺</span><span>Русский</span><i aria-hidden="true"></i></button>
+<button aria-selected="false" data-lang="en" role="option" type="button"><span class="sg-language-option-flag">🇬🇧</span><span>English</span><i aria-hidden="true"></i></button>
+<button aria-selected="false" data-lang="kk" role="option" type="button"><span class="sg-language-option-flag">🇰🇿</span><span>Қазақша</span><i aria-hidden="true"></i></button>
+</div>
+</div>
+<button aria-label="Избранное" class="sg-favorite-btn" data-action="favorites" type="button">
+<span class="sg-heart">♡</span><span class="sg-fav-label" data-i18n="favorites">Избранное</span><span class="sg-fav-count" id="favCount">0</span>
+</button>
+<button class="sg-login-btn" data-action="login" type="button"><span aria-hidden="true" class="account-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"></circle><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"></path></svg></span><span>Личный кабинет</span></button>
+<button aria-expanded="false" aria-label="Открыть меню" class="sg-menu-button" id="sgMenuButton" type="button">☰</button>
+</div>
+</div>
+</header>
+<div class="sg-mega-menu" id="sgMegaMenu" aria-hidden="true">
+  <div class="container sg-mega-shell">
+    <div class="sg-mega-columns">
+      <section><span>ПОСТУПЛЕНИЕ</span><a href="#catalog">Каталог учебных заведений <b>→</b></a><a href="#routes">Пять маршрутов <b>→</b></a><button data-action="find-route" type="button">Подобрать маршрут <b>→</b></button><button data-action="compare-open" type="button">Сравнение <b>→</b></button></section>
+      <section><span>О STUDYGO</span><a href="about.html">О компании <b>→</b></a><a href="team.html">Руководитель и команда <b>→</b></a><a href="about.html#verification">Безопасность и проверка данных <b>→</b></a><a href="services.html">Цены и услуги <b>→</b></a><a href="about.html#reviews">Отзывы <b>→</b></a></section>
+      <section><span>ПОЛЕЗНОЕ</span><a href="#blog">Блог <b>→</b></a><a href="#routes">Гайды по поступлению <b>→</b></a><button data-article-open="visa" type="button">Документы и виза <b>→</b></button><a href="#city-life">Жизнь в Китае <b>→</b></a><a href="#questions">Вопросы и ответы <b>→</b></a></section>
+      <aside class="sg-mega-passport"><span class="passport-photo"><img src="assets/images/original/studygo-office-admissions-v6.png" alt="Команда StudyGo работает с документами абитуриента"/></span><div><strong>StudyGo Passport</strong><p>Маршрут, документы, избранное и дедлайны — в одном личном пространстве.</p></div><a href="passport.html">Открыть паспорт →</a></aside>
+    </div>
+    <div class="sg-mega-contacts"><button data-action="consult" type="button">Telegram ↗</button><button data-action="consult" type="button">WhatsApp ↗</button><a href="tel:+70000000000">Позвонить ↗</a><a href="mailto:hello@studygo.example">Написать на email ↗</a></div>
+  </div>
+</div>
+<main id="top">
+<section class="sg-ref-hero" aria-label="Главный экран StudyGo">
+  <div class="container">
+    <article class="sg-ref-hero-card">
+      <div class="sg-ref-copy">
+        <span class="sg-ref-kicker"><i aria-hidden="true"></i>Поступление в Китай · набор 2026/27</span>
+        <h1>Твоя <span>China era</span> —<br><em>с понятным маршрутом</em></h1>
+        <p>Подберём университет и программу, проверим требования и соберём план поступления — спокойно и по шагам.</p>
+        <div class="sg-ref-actions">
+          <button class="sg-ref-btn sg-ref-btn-primary" data-action="find-route" id="heroFindRouteBtn" type="button">Подобрать маршрут <span aria-hidden="true">→</span></button>
+          <a class="sg-ref-btn sg-ref-btn-secondary" href="#catalog">Смотреть университеты</a>
+        </div>
+      </div>
+      <div class="sg-ref-visual" aria-label="Студенческая жизнь в Китае">
+        <div class="sg-ref-photo-large sg-ref-photo-main"><img alt="Выпускники китайского университета в мантиях и академических шапочках — визуализация StudyGo" fetchpriority="high" src="assets/images/original/studygo-graduates.png"></div>
+        <div class="sg-ref-photo-small"><img alt="Международные студенты в современном кампусе — визуализация StudyGo" src="assets/images/original/studygo-student-life.png"></div>
+        <div class="sg-ref-photo-round"><img alt="Арина, цифровой гид StudyGo" src="assets/images/guide/arina-metro-guide.png"></div>
+        <div class="sg-ref-note sg-ref-note-campus"><span aria-hidden="true"></span>Современный кампус</div>
+        <div class="sg-ref-note sg-ref-note-plan"><span aria-hidden="true"></span>План поступления<br>за 48 часов</div>
+        <a class="sg-ref-guide-note" href="#china-live" aria-label="StudyGo — цифровой гид"><strong>StudyGo</strong><small>цифровой гид</small><span aria-hidden="true">↗</span></a>
+        <div class="sg-ref-spark" aria-hidden="true"></div>
+      </div>
+      <div class="sg-ref-bottom">
+        <div class="sg-ref-contact" aria-label="Быстрый контакт для консультации">
+          <span class="sg-ref-contact-icon" aria-hidden="true"></span>
+          <input autocomplete="name" id="heroConsultInput" placeholder="Имя или @Telegram" type="text">
+          <button data-action="consult" id="heroConsultBtn" type="button"><span class="sg-ref-consult-desktop">Получить консультацию</span><span class="sg-ref-consult-mobile">Консультация</span></button>
+        </div>
+        <div class="sg-ref-proof" aria-label="Преимущества StudyGo">
+          <span class="sg-ref-proof-card sg-ref-proof-verified"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 2.9 7.4 7 8.6 4.1-1.2 7-4.1 7-8.6V6l-7-3Z"></path><path d="m8.6 12.2 2.2 2.2 4.8-5"></path></svg></i><em>Данные<br>проверены</em></span>
+          <span class="sg-ref-proof-card sg-ref-proof-count"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10h18L12 4 3 10Z"></path><path d="M5 10v8M9 10v8M15 10v8M19 10v8M4 18h16M3 21h18"></path></svg></i><em class="sg-ref-count-copy"><b id="statInstitutionCount" class="sg-ref-count-digits">205</b><span class="sg-ref-count-label"><span class="sg-ref-count-desktop">учебных заведений</span><span class="sg-ref-count-mobile">вузов</span><small>в базе</small></span></em></span>
+          <span class="sg-ref-proof-card sg-ref-proof-support"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"></path><path d="M6 12h1v6H6a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2ZM18 12h-1v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2Z"></path><path d="M17 18c-.8 2-2.5 3-5 3h-1"></path></svg></i><em>Поддержка<br>на каждом шаге</em></span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<section aria-label="Возможности обучения в Китае" class="sg-ref-marquee">
+  <div class="sg-ref-marquee-track" id="sgMarqueeTrack"></div>
+</section>
+<section class="sg-ref-process" aria-label="Как это работает">
+  <div class="container">
+    <div class="sg-ref-process-kicker"><span aria-hidden="true"></span>Как это работает</div>
+    <h2>Три шага до понятного плана</h2>
+    <div class="sg-ref-process-grid">
+      <a href="#routes" class="sg-ref-step">
+        <span class="sg-ref-step-icon sg-ref-step-compass" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m15.7 6.3-2.3 7.1-7.1 2.3 2.3-7.1 7.1-2.3Z"></path><path d="m16.5 16.5 3.5 3.5"></path></svg></span>
+        <b>1</b>
+        <strong>Выбираем вуз и программу</strong>
+        <em>Подберём варианты под ваши цели, язык и бюджет.</em>
+        <i aria-hidden="true">›</i>
+      </a>
+      <button data-article-open="documents" class="sg-ref-step" type="button">
+        <span class="sg-ref-step-icon sg-ref-step-check" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 8h6"></path><path d="m9 13 2 2 4-4"></path></svg></span>
+        <b>2</b>
+        <strong>Проверяем и собираем документы</strong>
+        <em>Проверим требования и подготовим всё необходимое.</em>
+        <i aria-hidden="true">›</i>
+      </button>
+      <button data-action="consult" class="sg-ref-step" type="button">
+        <span class="sg-ref-step-icon sg-ref-step-plane" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 3 3 10.5l8 2.5 2.5 8L21 3Z"></path><path d="m11 13 4-4"></path></svg></span>
+        <b>3</b>
+        <strong>Подаём и сопровождаем</strong>
+        <em>Подадим заявку и будем рядом на каждом шаге.</em>
+        <i aria-hidden="true">›</i>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section" id="catalog">
+<div class="container">
+<div class="section-head">
+<div><div class="section-kicker" data-i18n="catalogKicker">Умный каталог</div><h2 class="section-title" data-i18n="catalogTitle">Не просто список вузов — подбор по реальным условиям</h2></div>
+<p class="section-note" data-i18n="catalogNote">Фильтры работают одновременно. Например: колледж в Гуанчжоу, после 9 класса, от 15 лет, без HSK, с общежитием и грантом.</p>
+</div>
+<div class="catalog-layout">
+<aside class="filters" id="desktopFilters">
+<div class="filters-top"><h3 data-i18n="filters">Фильтры</h3><button class="filters-reset" data-action="reset" data-i18n="reset" type="button">Сбросить</button></div>
+<div id="filterContent"></div>
+</aside>
+<div class="catalog-main">
+<div class="catalog-toolbar">
+<div class="catalog-live-count"><span class="flip-count" id="catalogInstitutionCount">325</span><p><strong>учебных заведений</strong><small>● меняется вместе с фильтрами</small></p></div>
+<input class="catalog-search" data-i18n-placeholder="catalogPlaceholder" id="catalogSearch" placeholder="Введите название, город или специальность" type="search"/>
+<button class="toolbar-btn toolbar-filter-mobile" data-i18n="filters" id="openFilters" type="button">Фильтры</button>
+<select aria-label="Sort" class="sort-select" id="sortSelect"></select>
+</div>
+<div class="catalog-meta"><div class="result-count" id="resultCount"></div><div class="active-chips" id="activeChips"></div></div>
+<div class="cards" id="cards"></div>
+<nav class="catalog-pagination" id="catalogPagination" aria-label="Пагинация каталога"></nav>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sg-china-live sg-city-pulse-section" id="china-live">
+  <div class="container">
+    <div class="sg-section-head sg-live-head">
+      <div><div class="sg-eyebrow">КИТАЙ СЕЙЧАС</div><h2>Немного ближе к будущей жизни.</h2></div>
+      <p>Короткая живая заметка от StudyGo: город, время, погода и одна важная деталь студенческого дня.</p>
+    </div>
+    <div class="sg-city-pulse" aria-live="polite">
+      <div class="sg-city-visual" id="chinaWindow"><img id="cityPulseImage" src="assets/images/city/guangzhou-window-studygo.png" alt="Вид на Гуанчжоу — визуализация StudyGo"/><div class="sg-metro-light" aria-hidden="true"></div></div>
+      <div class="sg-city-summary"><span id="cityPulseEyebrow">СЕЙЧАС В ГУАНЧЖОУ</span><strong id="chinaNowTime">--:--</strong><p id="chinaNowWeather">Погода загружается…</p><small id="cityPulseStory">В кампусах заканчивается первая пара, а в метро уже оживлённо.</small></div>
+      <div class="sg-city-phrase"><span>КИТАЙ ГОВОРИТ</span><strong id="chinaPhrase">今天食堂有牛肉面</strong><p id="chinaTranslation">Сегодня в столовой есть лапша с говядиной.</p></div>
+      <div class="sg-city-controls" role="group" aria-label="Выбрать город"><button class="active" data-city="guangzhou" type="button">Гуанчжоу</button><button data-city="shenzhen" type="button">Шэньчжэнь</button><button data-city="beijing" type="button">Пекин</button><button data-city="shanghai" type="button">Шанхай</button><button class="sg-pulse-more" data-guide-open type="button">Открыть гид →</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="sg-routes-section" id="routes">
+<div class="container">
+<div class="sg-routes-head">
+<div><div class="sg-eyebrow">Выберите свою точку старта</div><h2>Пять маршрутов поступления в Китай</h2></div>
+<p>У каждого абитуриента своя исходная точка. Выберите маршрут — каталог сразу покажет подходящие университеты и программы.</p>
+</div>
+<div class="sg-routes-grid" aria-label="Пять маршрутов поступления">
+<button class="sg-route-card sg-route-language" data-route="language" type="button">
+<span class="sg-route-media"><img alt="Студенты обсуждают языковой год" data-route-image="0"/><span class="sg-route-label">01</span><span class="sg-route-arrow">↗</span></span>
+<span class="sg-route-content"><strong>Языковой год</strong><span class="sg-route-text">Семестр или год китайского: с нулевого уровня, кампусная жизнь и подготовка к HSK.</span><span class="sg-route-tags"><i>язык</i><i>мягкий старт</i></span></span>
+</button>
+<button class="sg-route-card sg-route-grade9" data-route="grade9" type="button">
+<span class="sg-route-media"><img alt="Подростки выбирают программу после 9 класса" data-route-image="1"/><span class="sg-route-label">02</span><span class="sg-route-arrow">↗</span></span>
+<span class="sg-route-content"><strong>После 9 класса</strong><span class="sg-route-text">Старшая школа, пятилетний колледж или специальная pathway-программа.</span><span class="sg-route-tags"><i>подросткам</i><i>семье</i></span></span>
+</button>
+<button class="sg-route-card sg-route-grade11 active" data-route="grade11" type="button">
+<span class="sg-route-popular">✦ Популярный маршрут</span><span class="sg-route-media"><img alt="Выпускники после 11 класса" data-route-image="2"/><span class="sg-route-label">03</span><span class="sg-route-arrow">↗</span></span>
+<span class="sg-route-content"><strong>После 11 класса</strong><span class="sg-route-text">Прямой бакалавриат, подготовительный год или языковой год.</span><span class="sg-route-tags"><i>бакалавриат</i><i>гранты</i></span></span>
+</button>
+<button class="sg-route-card sg-route-master" data-route="master" type="button">
+<span class="sg-route-media"><img alt="Студентка готовится к магистратуре" data-route-image="3"/><span class="sg-route-label">04</span><span class="sg-route-arrow">↗</span></span>
+<span class="sg-route-content"><strong>Магистратура</strong><span class="sg-route-text">Продолжение обучения: язык, академический профиль и исследования.</span><span class="sg-route-tags"><i>исследования</i><i>стипендии</i></span></span>
+</button>
+<button class="sg-route-card sg-route-second" data-route="secondDegree" type="button">
+<span class="sg-route-media"><img alt="Второе высшее образование" data-route-image="4"/><span class="sg-route-label">05</span><span class="sg-route-arrow">↗</span></span>
+<span class="sg-route-content"><strong>Второе высшее</strong><span class="sg-route-text">Новая профессия после первого диплома: проверяем возраст и требования.</span><span class="sg-route-tags"><i>новая профессия</i><i>личный план</i></span></span>
+</button>
+</div>
+<div class="sg-route-mobile-meter"><strong>01</strong><span>/ 05</span><i></i><i></i><i></i><i></i><i></i></div>
+<div class="sg-route-tabs" aria-label="Быстрый выбор маршрута">
+<button data-route="language" type="button">Языковой год</button><button data-route="grade9" type="button">После 9 класса</button><button class="active" data-route="grade11" type="button">После 11 класса</button><button data-route="master" type="button">Магистратура</button><button data-route="secondDegree" type="button">Второе высшее</button>
+</div>
+<button class="sg-route-feature" data-route="grade11" type="button"><img src="assets/images/embedded-13-21bd8cdbd7.jpg" alt="Выпускники после 11 класса" loading="lazy"/><span><strong>После 11 класса</strong><em>Бакалавриат, подготовительный год или языковой год.</em><b>бакалавриат</b><b>гранты</b></span><i>Смотреть варианты →</i></button>
+<div class="sg-route-builder">
+<div class="sg-route-form"><h3>Получите подборку под вашу ситуацию</h3><label><span>⌂</span><strong>Сейчас учусь:</strong><select aria-label="Сейчас учусь"><option>11 класс</option><option>9 класс</option><option>бакалавриат</option></select></label><label><span>○</span><strong>Возраст:</strong><select aria-label="Возраст"><option>17 лет</option><option>15 лет</option><option>18 лет</option></select></label><label><span>◎</span><strong>Китайский:</strong><select aria-label="Китайский"><option>с нуля</option><option>HSK 3</option><option>HSK 4</option></select></label><label><span>◉</span><strong>Цель:</strong><select aria-label="Цель"><option>бакалавриат с грантом</option><option>языковой год</option><option>магистратура</option></select></label><button data-action="consult" type="button">Собрать мой маршрут <span>→</span></button><small>▢ Без спама. Результат сохранится в личном кабинете.</small></div>
+<div class="sg-route-guides"><div class="sg-eyebrow">Гиды по вашему маршруту</div><h3>Для 11 класса, 17 лет, без HSK</h3><div class="sg-route-guide-list"><button data-article-open="routeGrade11" type="button"><img src="assets/images/embedded-16-b081e22608.jpg" alt="План поступления" loading="lazy"/><strong>Как поступить в Китай после 11 класса: план по месяцам</strong><span>◷ 10 мин чтения <b>Подходит вам</b></span></button><button data-article-open="hsk2026" type="button"><img src="assets/images/official/gdufs-campus-cc-by-sa.jpg" alt="Гранты без HSK" loading="lazy"/><strong>Гранты без HSK: где это реально в 2026 году</strong><span>◷ 8 мин чтения <b>Подходит вам</b></span></button><button data-article-open="routeLanguage" type="button"><img src="assets/images/embedded-12-8290b6c984.jpg" alt="Языковой год или бакалавриат" loading="lazy"/><strong>Что выбрать: языковой год или прямой бакалавриат</strong><span>◷ 9 мин чтения <b>Подходит вам</b></span></button></div><button class="sg-route-all-guides" data-article-open="routeGrade11" type="button">Все материалы маршрута <span>→</span></button></div>
+</div>
+<div class="sg-route-verified"><span>✓</span><p>Материалы и требования проверены специалистом <b>StudyGo</b></p><i></i></div>
+</div>
+</section><section class="sg-knowledge-section" id="blog">
+<div class="container">
+<div class="sg-knowledge-head">
+<div><div class="sg-eyebrow">База знаний</div><h2>Разобраться в поступлении — без тревоги</h2></div>
+<div class="sg-knowledge-head-side"><p>Короткие инструкции, реальные сроки и требования. Материалы обновляются вместе с правилами вузов.</p><button class="sg-all-articles" data-article-open="after9" type="button">Все статьи <span>→</span></button></div>
+</div>
+<div class="sg-knowledge-layout">
+<button class="sg-knowledge-feature" data-article-open="after9" type="button">
+<img src="assets/images/original/studygo-student-life.png" alt="Студенты идут по современному кампусу" loading="lazy"/>
+<span class="sg-feature-tag">Главный гид</span>
+<strong>Поступление в Китай в 2026 году: полный план от выбора программы до визы</strong>
+<small>12 минут · обновлено 30.07.2026</small>
+<span class="sg-feature-arrow">→</span>
+</button>
+<div class="sg-knowledge-list">
+<button class="sg-knowledge-item" data-article-open="after9" type="button"><img src="assets/images/embedded-12-8290b6c984.jpg" alt="Студенты обсуждают поступление" loading="lazy"/><span><b>Для подростков</b><strong>После 9 класса в Китай: варианты для подростка и семьи</strong><small>6 минут чтения</small></span><i>→</i></button>
+<button class="sg-knowledge-item" data-article-open="hsk2026" type="button"><img src="assets/images/embedded-16-b081e22608.jpg" alt="Студентка занимается в библиотеке" loading="lazy"/><span><b>Экзамены</b><strong>HSK в 2026 году: когда он нужен, а когда можно без него</strong><small>7 минут чтения</small></span><i>→</i></button>
+<button class="sg-knowledge-item" data-article-open="visa" type="button"><img src="assets/images/unsplash-1562774053-1200-q82.jpg" alt="Учебный корпус и зелёный кампус" loading="lazy"/><span><b>Визы и документы</b><strong>Виза X1 или X2: чем отличаются и что готовить</strong><small>5 минут чтения</small></span><i>→</i></button>
+</div>
+</div>
+<button class="sg-all-articles sg-all-articles-mobile" data-article-open="after9" type="button">Все статьи <span>→</span></button>
+<div class="sg-source-strip"><span>✓</span><p>Редакция проверяет требования по официальным источникам</p></div>
+<div class="sg-studygo-panel" aria-label="О StudyGo">
+<div class="sg-studygo-collage">
+<div class="sg-collage-main"><img src="assets/images/original/studygo-office-admissions-v6.png" alt="Команда StudyGo работает с документами поступления" loading="lazy"/></div>
+<div class="sg-collage-note"><img src="assets/images/original/studygo-office-admissions-v6.png" alt="Чек-лист документов поступления" loading="lazy"/></div>
+<div class="sg-collage-campus"><img src="assets/images/embedded-08-1aafc8680c.jpg" alt="Современный кампус" loading="lazy"/></div>
+</div>
+<div class="sg-studygo-copy">
+<div class="sg-eyebrow">О StudyGo</div>
+<h2>Помогаем выбрать реальный маршрут поступления в Китай</h2>
+<p>Не обещаем невозможное. Сверяем требования, объясняем риски и ведём по этапам — от первой консультации до адаптации в кампусе.</p>
+<div class="sg-studygo-checks"><span>Данные проверены вручную</span><span>Понятный план и сроки</span><span>Связь со специалистом</span></div>
+<div class="sg-studygo-actions"><a href="about.html">Как мы работаем <span>→</span></a><a href="team.html">Команда StudyGo <span>→</span></a></div>
+</div>
+<blockquote class="sg-studygo-quote"><b>“</b><p>Мы всегда понимаем, что уже готово и какой шаг следующий.</p><footer><img src="assets/images/guide/arina-campus-group.png" alt="" loading="lazy"/><span>родитель абитуриента</span></footer></blockquote>
+</div>
+<div class="sg-studygo-stats" aria-label="Ключевые факты StudyGo">
+<a href="#catalog"><span>⌂</span><strong>205</strong><em>вузов в каталоге</em><i>→</i></a>
+<a href="#routes"><span>⌁</span><strong>5</strong><em>маршрутов поступления</em><i>→</i></a>
+<a href="#questions"><span>☊</span><strong></strong><em>Поддержка до зачисления</em><i>→</i></a>
+</div>
+</div>
+</section>
+<section class="sg-storyfaq-section" id="student-stories">
+<div class="container">
+<div class="sg-story-head">
+<div><div class="sg-eyebrow">Истории студентов</div><h2>Поступление — это не только документы</h2><p>Показываем путь целиком: с какой точки стартовали, что выбрали и как прошла адаптация.</p></div>
+<div class="sg-story-consent"><span>✓</span><p>Истории опубликованы<br/>с согласия студентов</p></div>
+</div>
+<div class="sg-story-grid">
+<a class="sg-story-video" href="about.html#reviews" aria-label="Смотреть истории студентов">
+<img src="assets/images/embedded-03-da96221da1.webp" alt="Студенты возле современного кампуса" loading="lazy"/>
+<span class="sg-play-button">▶</span>
+<span class="sg-story-route">После 11 класса · бакалавриат</span>
+<strong>Мой первый месяц<br/>в Гуанчжоу</strong>
+<small>видео 2:18</small>
+</a>
+<div class="sg-story-reviews">
+<article class="sg-story-review"><img src="assets/images/embedded-16-b081e22608.jpg" alt="Алина, студентка языкового года" loading="lazy"/><div><h3>Алина <span>языковой год</span></h3><p>Больше всего помог понятный план: я знала, что готовить сейчас, а что можно позже.</p><small>✓ согласовано</small></div></article>
+<article class="sg-story-review"><img src="assets/images/embedded-17-bd772b098f.jpg" alt="Даниил, студент после 11 класса" loading="lazy"/><div><h3>Даниил <span>после 11 класса</span></h3><p>В каталоге сразу увидел варианты без HSK и с общежитием — не пришлось сравнивать всё вручную.</p><small>✓ согласовано</small></div></article>
+<a class="sg-story-all" href="about.html#reviews">Смотреть все истории <span>→</span></a>
+</div>
+</div>
+<div class="sg-story-steps" aria-label="Этапы маршрута студента">
+<a href="#routes"><span>⌁</span><strong>Маршрут выбран</strong><i>→</i></a>
+<a href="#blog"><span>▣</span><strong>Документы собраны</strong><i>→</i></a>
+<a href="#city-life"><span>⌂</span><strong>Адаптация в кампусе</strong><i>→</i></a>
+</div>
+<section class="sg-storyfaq-faq" id="questions">
+<div class="sg-storyfaq-intro"><div class="sg-eyebrow">Вопросы и ответы</div><h2>Коротко о том, что волнует чаще всего</h2><p>Если не нашли ответ — напишите нам. Специалист уточнит вашу ситуацию.</p><div class="sg-storyfaq-actions"><button data-action="consult" type="button">Задать вопрос</button><button data-action="consult" type="button">Написать в Telegram</button></div><small>◷ Отвечаем ежедневно</small></div>
+<div class="sg-storyfaq-list">
+<details class="sg-storyfaq-item"><summary>Можно ли поступить в Китай без знания китайского?</summary><p>Да, часть программ доступна на английском или через языковой год. Условия зависят от конкретного учебного заведения.</p></details>
+<details class="sg-storyfaq-item"><summary>Какие варианты есть после 9 класса?</summary><p>Чаще всего рассматривают школу, колледж, pathway-программу или языковую подготовку с проверкой возраста и проживания.</p></details>
+<details class="sg-storyfaq-item" open><summary>Принимают ли университеты несовершеннолетних?</summary><p>Да, часть школ, колледжей и pathway-программ принимает абитуриентов младше 18 лет. В каталоге это отмечено отдельным фильтром, а требования проверяются для каждого учреждения.</p></details>
+<details class="sg-storyfaq-item"><summary>Можно ли получить грант или общежитие?</summary><p>Можно, но покрытие и доступность зависят от университета, программы, сроков подачи и исходных данных абитуриента.</p></details>
+<details class="sg-storyfaq-item"><summary>Что входит в сопровождение StudyGo?</summary><p>Мы подбираем варианты, проверяем требования, готовим документы, подаём заявку и сопровождаем до зачисления и адаптации в Китае.</p></details>
+</div>
+</section>
+<div class="sg-storyfaq-cta"><span>✦</span><div><h2>Не знаете, с чего начать?</h2><p>Ответьте на 4 вопроса — покажем подходящий маршрут.</p></div><a href="#routes">Подобрать маршрут <b>→</b></a><i>↗</i></div>
+</div>
+</section>
+<section class="sg-life-section" id="city-life">
+<div class="container">
+<div class="sg-section-head"><div><div class="sg-eyebrow">Жизнь в Китае</div><h2>Не только поступить — спокойно начать новую жизнь</h2></div><p>Показываем бытовую сторону заранее: проживание, транспорт, связь, питание, медицина и первые недели в кампусе.</p></div>
+<div class="sg-life-grid">
+<article class="sg-life-feature"><img src="assets/images/original/studygo-student-life.png" alt="Студенты в современном кампусе" loading="lazy"/><div><span>Первые 30 дней</span><h3>Как устроена адаптация после приезда</h3><p>Заселение, регистрация, SIM-карта, банковские сервисы, кампусные приложения и связь с куратором — в одном понятном плане.</p><button data-action="consult" type="button">Получить план адаптации ↗</button></div></article>
+<article class="sg-life-card"><span>01</span><h3>Общежитие</h3><p>Тип комнаты, депозит, правила заселения и что взять с собой.</p><a href="#catalog">Смотреть учреждения ↗</a></article>
+<article class="sg-life-card"><span>02</span><h3>Город и транспорт</h3><p>Кампус, метро, аэропорт и реальные ежедневные маршруты.</p><a href="#catalog">Выбрать город ↗</a></article>
+<article class="sg-life-card"><span>03</span><h3>Связь с семьёй</h3><p>Экстренные контакты, куратор и понятный канал для родителей.</p><button data-action="consult" type="button">Задать вопрос ↗</button></article>
+</div>
+</div>
+</section>
+<section class="sg-home-links-section" aria-label="О StudyGo и услугах">
+<div class="container sg-home-links-grid">
+<a class="sg-home-link-card sg-home-link-trust" href="about.html"><span>О STUDYGO</span><h2>Доверие строится на понятном процессе.</h2><p>Команда, руководитель, проверка данных, отзывы и контакты — на отдельной странице, где ничто не отвлекает.</p><b>О компании →</b></a>
+<a class="sg-home-link-card sg-home-link-services" href="services.html"><span>ЦЕНЫ И УСЛУГИ</span><h2>Понятный состав работы до старта.</h2><p>Разделили услуги StudyGo и расходы университета, чтобы семья видела структуру маршрута заранее.</p><b>Смотреть услуги →</b></a>
+</div>
+</section>
+<section class="sg-about-section" id="about" hidden>
+<div class="container">
+<div class="sg-about-shell">
+<div aria-label="StudyGo — команда и студенты" class="sg-about-photo" role="img"><img alt="" class="sg-about-image" id="aboutImage"/></div>
+<div class="sg-about-content">
+<div class="sg-eyebrow" data-i18n="aboutKickerNew">О компании</div>
+<h2 data-i18n="aboutTitleNew">Помогаем выбрать реальный маршрут поступления в Китай</h2>
+<p class="sg-about-lead" data-i18n="aboutLeadNew">StudyGo — сервис подбора и сопровождения поступления в Китай. Сначала мы учитываем возраст, аттестат или диплом, язык, бюджет и цель обучения, затем проверяем требования конкретной программы и набора.</p>
+<div class="sg-about-points">
+<article class="sg-about-point"><span>⌕</span><h3 data-i18n="aboutPoint1Title">Определяем доступные маршруты</h3><p data-i18n="aboutPoint1Text">Школа, колледж, языковой год, foundation, бакалавриат или магистратура — по вашим исходным данным.</p></article>
+<article class="sg-about-point"><span>✓</span><h3 data-i18n="aboutPoint2Title">Проверяем программу и набор</h3><p data-i18n="aboutPoint2Text">Уточняем HSK, IELTS, CSCA, возраст, общежитие, стоимость, гранты и дедлайны.</p></article>
+<article class="sg-about-point"><span>◎</span><h3 data-i18n="aboutPoint3Title">Готовим подачу без пропусков</h3><p data-i18n="aboutPoint3Text">Формируем чек-лист, проверяем анкеты и переводы и следим за календарём подачи.</p></article>
+<article class="sg-about-point"><span>文</span><h3 data-i18n="aboutPoint4Title">Сопровождаем после зачисления</h3><p data-i18n="aboutPoint4Text">Помогаем с визовыми документами, общежитием, приездом и регистрацией в Китае.</p></article>
+</div>
+<div class="sg-about-bottom">
+<div class="sg-about-stats">
+<div class="sg-about-stat"><strong>01</strong><span data-i18n="aboutStatLanguages">проверка исходных данных</span></div>
+<div class="sg-about-stat"><strong>02</strong><span data-i18n="aboutStatFilters">календарь и смета поступления</span></div>
+<div class="sg-about-stat"><strong>03</strong><span data-i18n="aboutStatPlan">сопровождение до выезда</span></div>
+</div>
+<button class="sg-about-cta" data-action="consult" data-i18n="aboutCtaNew" type="button">Получить план поступления</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="sg-leadership-section" id="team" hidden>
+<div class="container">
+<div class="sg-leadership-shell">
+<div class="sg-leadership-intro">
+<div class="sg-eyebrow">Руководитель и доверие</div>
+<h2>Кому вы доверяете путь ребёнка</h2>
+<p>Безопасность начинается не с обещаний, а с ответственности, проверяемых данных и понятных обязательств.</p>
+</div>
+<div class="sg-leadership-grid">
+<article class="sg-leader-card">
+<div class="sg-leader-placeholder" aria-label="Павел Чугунов, руководитель StudyGo"><img src="assets/images/team/pavel-chugunov.jpg" alt="Павел Чугунов, руководитель StudyGo"></div>
+<div class="sg-leader-copy"><span>Павел Чугунов · руководитель StudyGo</span><blockquote>«Мы отвечаем не только за документы — мы помогаем семье понимать каждый следующий шаг».</blockquote></div>
+<div class="sg-leader-facts">
+<div>Председатель попечительского совета благотворительного фонда «Дари Добро»</div>
+<div>Элиста, Республика Калмыкия</div>
+<div>Проверяем требования учебных заведений до рекомендации</div>
+<div>Прозрачный план и сопровождение для семьи</div>
+</div>
+</article>
+<article class="sg-responsibility-card">
+<h3>Как устроена ответственность</h3>
+<ol><li><span>1</span>Проверяем официальный источник</li><li><span>2</span>Фиксируем условия и дату проверки</li><li><span>3</span>Объясняем риски до начала работы</li><li><span>4</span>Остаёмся на связи после зачисления</li></ol>
+<p>Команда рядом в Москве и Гуанчжоу</p>
+<div class="sg-leadership-actions"><button data-action="consult" type="button">Познакомиться с командой ↗</button><a href="about.html#verification">Как мы проверяем данные</a></div>
+</article>
+</div>
+<div class="sg-leadership-note">Без обещаний невозможного — с прозрачным планом, договором и ответственным сопровождением.</div>
+</div>
+</div>
+</section>
+<section class="sg-service-section" id="services" hidden>
+  <div class="container">
+    <div class="sg-section-head sg-service-head"><div><div class="sg-eyebrow">Цены и услуги</div><h2>Сопровождение с понятным составом работы</h2></div><p>Сначала разбираем вашу ситуацию, затем согласовываем объём помощи. До начала работы вы получаете перечень услуг, сроки, итоговую стоимость в USD и границы ответственности.</p></div>
+    <div class="sg-service-grid">
+      <article class="sg-service-card"><span>ЯЗЫКОВОЙ ГОД / FOUNDATION</span><h3>Мягкий старт в Китае</h3><p>Подбор программ, проверка требований, персональный чек‑лист, подготовка пакета документов, подача и сопровождение до решения.</p><strong>от $1 800*</strong><button data-action="consult" type="button">Посмотреть состав ↗</button></article>
+      <article class="sg-service-card featured"><span>БАКАЛАВРИАТ / МАГИСТРАТУРА</span><h3>Поступление под контролем</h3><p>Shortlist учебных заведений, проверка программы и дедлайнов, подготовка документов, коммуникация по заявке и план приезда.</p><strong>от $2 300*</strong><button data-action="consult" type="button">Посмотреть состав ↗</button></article>
+      <article class="sg-service-card"><span>ШКОЛА / КОЛЛЕДЖ ПОСЛЕ 9 КЛАССА</span><h3>Маршрут для семьи</h3><p>Проверка возраста и документов, условий проживания и опекунства, выбор подходящих учреждений и сопровождение семьи по этапам.</p><strong>от $2 300*</strong><button data-action="consult" type="button">Посмотреть состав ↗</button></article>
+    </div>
+    <div class="sg-service-promise"><strong>Без скрытых этапов</strong><span>*Ориентиры для макета. Финальная стоимость утверждается после диагностики и фиксируется в договоре до начала работы. Сопровождение не подменяет решение учебного заведения или консульства.</span><button data-action="consult" type="button">Получить состав услуг</button></div>
+  </div>
+</section>
+<section class="sg-reviews-section" id="reviews" hidden>
+  <div class="container">
+    <div class="sg-reviews-shell">
+      <div><div class="sg-eyebrow">Отзывы</div><h2>Истории поступления — только с согласия студентов</h2><p>Мы не публикуем вымышленные отзывы. Здесь будут проверенные истории с указанием маршрута, года поступления, программы и объёма оказанной поддержки.</p></div>
+      <div class="sg-review-principles"><div><b>Проверяем автора</b><span>Отзыв связан с реальной заявкой или консультацией.</span></div><div><b>Не скрываем контекст</b><span>Указываем исходное образование, язык и выбранный маршрут.</span></div><div><b>Публикуем с разрешения</b><span>Имя и фотография используются только после согласия.</span></div></div>
+      <button class="sg-review-button" data-action="consult" type="button">Рассказать о своём опыте ↗</button>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer" id="footer">
+<div class="container">
+<div class="footer-grid">
+<div><a class="brand" href="#top"><span class="brand-mark"></span><span><span class="brand-title">StudyGo</span><span class="brand-sub" data-i18n="brandSub" style="color:#8f95a6">Поступление в Китай</span></span></a><p data-i18n="footerText">Каталог учебных заведений и программ Китая для школьников, студентов и родителей из стран СНГ.</p></div>
+<div><h4 data-i18n="footerCatalog">Каталог</h4><div class="footer-links"><a data-i18n="universities" href="#catalog">Университеты</a><a data-i18n="colleges" href="#catalog">Колледжи</a><a data-i18n="languageCourses" href="#catalog">Языковые курсы</a><a data-i18n="scholarships" href="#catalog">Гранты</a></div></div>
+<div><h4 data-i18n="footerHelp">Поступление</h4><div class="footer-links"><a href="#routes">Пять маршрутов</a><a href="#blog">Документы и виза</a><a href="#questions">Вопросы и ответы</a><a href="#city-life">Жизнь в Китае</a></div></div>
+<div><h4 data-i18n="footerCompany">StudyGo</h4><div class="footer-links"><a href="team.html">Наша команда</a><a href="services.html">Цены и услуги</a><a href="about.html#reviews">Отзывы</a><a href="about.html#verification">Как мы проверяем данные</a><a href="admin.html">Редактор контента</a></div></div>
+</div>
+<div class="footer-contact-row"><button data-action="consult" type="button">Telegram ↗</button><button data-action="consult" type="button">WhatsApp ↗</button><a href="admin.html">Редактор контента ↗</a><button data-action="consult" type="button">Связаться с командой ↗</button><span>Москва · Гуанчжоу</span></div>
+<div class="footer-bottom"><span>© 2026 StudyGo</span><span data-i18n="demoFooter">Условия программ проверяются по официальным источникам и датам обновления.</span></div>
+</div>
+</footer>
+<div class="drawer-backdrop" id="drawerBackdrop"><div class="mobile-drawer"><div class="drawer-head"><h3 data-i18n="filters">Фильтры</h3><button class="drawer-close" id="closeFilters" type="button">✕</button></div><div id="mobileFilterContent"></div><button class="primary-btn" data-i18n="showResults" id="applyMobile" style="width:100%;margin-top:16px">Показать результаты</button></div></div>
+<div class="detail-overlay" id="detailOverlay"><div class="detail-shell" id="detailShell"></div></div>
+<div class="content-overlay" id="contentOverlay" aria-hidden="true"><div class="content-modal" id="contentModal" role="dialog" aria-modal="true"></div></div>
+<div class="toast" id="toast"></div>
+<div class="compare-bar" id="compareBar"><span id="compareText"></span><button data-i18n="compare" id="compareOpen" type="button">Сравнить</button></div>
+<script src="assets/data/public-registry.js" defer></script>
+<script src="assets/js/app.js?v=hero-icons-20260803" defer></script>
+<script src="assets/js/approved-v5.js?v=hero-icons-20260803" defer></script>
+</body>
+</html>
