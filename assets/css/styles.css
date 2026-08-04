@@ -2486,33 +2486,33 @@ a,button,.uni-card,.sg-blog-card,.sg-route-card{touch-action:manipulation}
 /* Desktop hero composition aligned with the approved StudyGo reference. */
 @media(min-width:1241px){
   .sg-ref-hero-card{
-    grid-template-columns:minmax(620px,680px) minmax(610px,1fr);
+    grid-template-columns:minmax(620px,650px) minmax(640px,1fr);
     column-gap:18px;
     padding-right:34px;
   }
   .sg-ref-visual{
     min-height:590px;
-    margin-top:-18px;
+    margin-top:-10px;
   }
   .sg-ref-photo-large{
     top:0;
-    right:0;
-    width:68%;
-    height:438px;
+    right:-5px;
+    width:440px;
+    height:488px;
     transform:rotate(2.5deg);
   }
   .sg-ref-photo-small{
-    left:-2%;
-    top:292px;
-    width:60%;
-    height:278px;
+    left:-38px;
+    top:285px;
+    width:400px;
+    height:310px;
     transform:rotate(-5deg);
   }
   .sg-ref-photo-round{
-    right:-1%;
-    bottom:-3px;
-    width:205px;
-    height:205px;
+    right:-8px;
+    bottom:-19px;
+    width:238px;
+    height:238px;
   }
   .sg-ref-note-campus{
     left:0;
@@ -2523,9 +2523,10 @@ a,button,.uni-card,.sg-blog-card,.sg-route-card{touch-action:manipulation}
     top:24px;
   }
   .sg-ref-guide-note{
-    right:166px;
-    bottom:-72px;
-    min-height:62px;
+    right:0;
+    bottom:-76px;
+    min-width:178px;
+    min-height:60px;
     display:grid;
     grid-template-columns:auto auto;
     grid-template-rows:auto auto;
@@ -2533,7 +2534,7 @@ a,button,.uni-card,.sg-blog-card,.sg-route-card{touch-action:manipulation}
     row-gap:3px;
     align-content:center;
     padding:8px 18px;
-    font-size:20px;
+    font-size:19px;
   }
   .sg-ref-guide-note strong{
     grid-column:1;
@@ -2545,7 +2546,7 @@ a,button,.uni-card,.sg-blog-card,.sg-route-card{touch-action:manipulation}
     grid-row:2;
     display:block;
     color:rgba(255,255,255,.78);
-    font-size:10px;
+    font-size:11px;
     font-weight:900;
     line-height:1;
     letter-spacing:0;
@@ -2556,8 +2557,8 @@ a,button,.uni-card,.sg-blog-card,.sg-route-card{touch-action:manipulation}
     align-self:center;
   }
   .sg-ref-spark{
-    left:25%;
-    top:154px;
+    left:20%;
+    top:140px;
   }
   .sg-ref-marquee-track{
     min-height:52px;
@@ -2572,7 +2573,7 @@ a,button,.uni-card,.sg-blog-card,.sg-route-card{touch-action:manipulation}
     font-size:16px;
   }
   .sg-ref-process{
-    padding-top:24px;
+    padding:24px 0 34px;
   }
   .sg-ref-process-grid{
     gap:30px;
