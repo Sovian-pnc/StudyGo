@@ -51,6 +51,33 @@
     }
   });
 
+  const gallery = $('[data-team-lightbox]');
+  const galleryImage = $('[data-gallery-image]', gallery);
+  const galleryCaption = $('[data-gallery-caption]', gallery);
+  const closeGallery = () => {
+    if (!gallery) return;
+    gallery.classList.remove('open');
+    gallery.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('team-gallery-open');
+    if (galleryImage) galleryImage.removeAttribute('src');
+  };
+  $$('[data-gallery-src]').forEach((button) => button.addEventListener('click', () => {
+    if (!gallery || !galleryImage) return;
+    const source = button.dataset.gallerySrc;
+    const caption = button.dataset.galleryCaption || '';
+    if (!source) return;
+    galleryImage.src = source;
+    galleryImage.alt = caption;
+    if (galleryCaption) galleryCaption.textContent = caption;
+    gallery.classList.add('open');
+    gallery.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('team-gallery-open');
+    $('[data-gallery-close]', gallery)?.focus();
+  }));
+  $('[data-gallery-close]', gallery)?.addEventListener('click', closeGallery);
+  gallery?.addEventListener('click', (event) => { if (event.target === gallery) closeGallery(); });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeGallery(); });
+
   const passportForm = $('[data-passport-form]');
   if (passportForm) {
     const status = $('[data-passport-status]');
