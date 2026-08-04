@@ -54,19 +54,91 @@
   const passportForm = $('[data-passport-form]');
   if (passportForm) {
     const status = $('[data-passport-status]');
-    const studentName = $('[name="name"]', passportForm);
-    studentName?.addEventListener('input', () => {
-      const isLatin = !studentName.value || /^[A-Za-z][A-Za-z .'-]*$/.test(studentName.value);
-      studentName.setCustomValidity(isLatin ? '' : 'Введите имя латинскими буквами.');
+    const steps = $$('[data-passport-step]', passportForm);
+    const nav = $('[data-passport-nav]');
+    const previous = $('[data-passport-prev]');
+    const next = $('[data-passport-next]');
+    const save = $('[data-passport-save]');
+    const progress = $('[data-passport-progress]');
+    const progressBar = $('[data-passport-progress-bar]');
+    const updated = $('[data-passport-updated]');
+    const storageKey = 'studygo-passport-draft';
+    let currentStep = 0;
+
+    const latinText = /^[A-Za-z0-9][A-Za-z0-9\s@.,'()\-/]*$/;
+    const latinName = /^[A-Za-z][A-Za-z .'-]*$/;
+    const validateLatin = (field) => {
+      const pattern = field.matches('[data-latin-name]') ? latinName : latinText;
+      field.setCustomValidity(!field.value || pattern.test(field.value) ? '' : 'Use Latin characters only.');
+    };
+    $$('[data-latin], [data-latin-name]', passportForm).forEach((field) => {
+      field.addEventListener('input', () => validateLatin(field));
+    });
+
+    const updateProgress = () => {
+      const required = $$('[required]', passportForm);
+      const completed = required.filter((field) => field.value.trim() && field.checkValidity()).length;
+      const percent = required.length ? Math.round((completed / required.length) * 100) : 0;
+      if (progress) progress.textContent = `${percent}% filled`;
+      if (progressBar) progressBar.style.width = `${percent}%`;
+    };
+    const showStep = (index) => {
+      currentStep = Math.max(0, Math.min(index, steps.length - 1));
+      steps.forEach((step, stepIndex) => { step.hidden = stepIndex !== currentStep; });
+      $$('button', nav).forEach((button, stepIndex) => {
+        button.classList.toggle('active', stepIndex === currentStep);
+        button.setAttribute('aria-current', stepIndex === currentStep ? 'step' : 'false');
+      });
+      if (previous) previous.hidden = currentStep === 0;
+      if (next) next.hidden = currentStep === steps.length - 1;
+      if (save) save.hidden = currentStep !== steps.length - 1;
+    };
+    const saveDraft = () => {
+      const draft = Object.fromEntries(new FormData(passportForm).entries());
+      const changedAt = new Date().toISOString();
+      sessionStorage.setItem(storageKey, JSON.stringify(draft));
+      sessionStorage.setItem(`${storageKey}-updated`, changedAt);
+      if (updated) updated.textContent = `Last updated: ${new Date(changedAt).toLocaleString('en-GB')}`;
+      if (status) status.textContent = 'Status: draft. Changes are saved automatically in this browser.';
+      updateProgress();
+    };
+
+    steps.forEach((step, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = String(index + 1);
+      button.setAttribute('aria-label', `Step ${index + 1}`);
+      button.addEventListener('click', () => showStep(index));
+      nav?.append(button);
+    });
+    passportForm.addEventListener('input', saveDraft);
+    passportForm.addEventListener('change', saveDraft);
+    previous?.addEventListener('click', () => showStep(currentStep - 1));
+    next?.addEventListener('click', () => {
+      const fields = $$('input, select, textarea', steps[currentStep]);
+      fields.forEach((field) => { if (field.matches('[data-latin], [data-latin-name]')) validateLatin(field); });
+      const invalid = fields.find((field) => !field.checkValidity());
+      if (invalid) { invalid.reportValidity(); return; }
+      showStep(currentStep + 1);
     });
     passportForm.addEventListener('submit', (event) => {
       event.preventDefault();
+      $$('[data-latin], [data-latin-name]', passportForm).forEach(validateLatin);
       if (!passportForm.reportValidity()) return;
-      const draft = Object.fromEntries(new FormData(passportForm).entries());
-      sessionStorage.setItem('studygo-passport-draft', JSON.stringify(draft));
-      const name = draft.name ? `, ${draft.name}` : '';
-      if (status) status.textContent = `Черновик сохранён в этом браузере${name}. Для личного кабинета команды подключите авторизацию Supabase.`;
+      saveDraft();
+      if (status) status.textContent = 'Status: draft saved. All required fields are complete.';
     });
+    try {
+      const stored = JSON.parse(sessionStorage.getItem(storageKey) || 'null');
+      if (stored) Object.entries(stored).forEach(([name, value]) => {
+        const field = passportForm.elements.namedItem(name);
+        if (field && typeof value === 'string') field.value = value;
+      });
+      const changedAt = sessionStorage.getItem(`${storageKey}-updated`);
+      if (changedAt && updated) updated.textContent = `Last updated: ${new Date(changedAt).toLocaleString('en-GB')}`;
+    } catch { /* corrupted browser draft is safely ignored */ }
+    showStep(0);
+    updateProgress();
     $$('[data-doc-check]').forEach((button) => button.addEventListener('click', () => {
       const checked = button.dataset.checked === 'true';
       button.dataset.checked = String(!checked);
