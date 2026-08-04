@@ -114,7 +114,7 @@
         <h3 class="uni-title">${nameOf(item.name)}</h3><p class="uni-zh">${htmlSafe(item.zh || '')}</p>
         <div class="uni-tags"><span class="tag purple">${t(item.type)}</span>${item.dormitory ? '<span class="tag mint">Есть общежитие</span>' : ''}${item.minor ? '<span class="tag">Принимают несовершеннолетних</span>' : ''}</div>
         <div class="uni-grid"><div class="uni-fact"><span>Уровень</span><strong>${level}</strong></div><div class="uni-fact"><span>Обучение</span><strong>${tuition}</strong></div><div class="uni-fact"><span>Программ в базе</span><strong>${programs}</strong></div><div class="uni-fact"><span>Данные</span><strong>${item.sourceType === 'public-catalog' ? 'требуют проверки' : 'проверены по источнику'}</strong></div></div>
-        <div class="uni-actions"><button class="details-btn" data-detail="${item.id}">Смотреть программы</button><button class="compare-btn ${compare.has(item.id) ? 'active' : ''}" data-compare="${item.id}">${compare.has(item.id) ? '✓ Добавлено' : 'Сравнить'}</button></div>
+        <div class="uni-actions"><button class="details-btn" data-detail="${item.id}"><span class="details-label-long">Смотреть программы</span><span class="details-label-short">Программы</span></button><button class="compare-btn ${compare.has(item.id) ? 'active' : ''}" data-compare="${item.id}" aria-label="${compare.has(item.id) ? 'Убрать из сравнения' : 'Добавить к сравнению'}">${compare.has(item.id) ? '✓ Добавлено' : 'Сравнить'}</button></div>
       </div>
     </article>`;
   };
