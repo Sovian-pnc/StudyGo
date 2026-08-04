@@ -54,8 +54,14 @@
   const passportForm = $('[data-passport-form]');
   if (passportForm) {
     const status = $('[data-passport-status]');
+    const studentName = $('[name="name"]', passportForm);
+    studentName?.addEventListener('input', () => {
+      const isLatin = !studentName.value || /^[A-Za-z][A-Za-z .'-]*$/.test(studentName.value);
+      studentName.setCustomValidity(isLatin ? '' : 'Введите имя латинскими буквами.');
+    });
     passportForm.addEventListener('submit', (event) => {
       event.preventDefault();
+      if (!passportForm.reportValidity()) return;
       const draft = Object.fromEntries(new FormData(passportForm).entries());
       sessionStorage.setItem('studygo-passport-draft', JSON.stringify(draft));
       const name = draft.name ? `, ${draft.name}` : '';
